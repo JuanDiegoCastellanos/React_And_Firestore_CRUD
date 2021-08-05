@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# REACT AND FIREBASE - FIRESTORE CRUD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Proyecto en el cual se utiliza Firestore para almacenar los datos enviados por medio del Front-end con REACT**
 
-## Available Scripts
+## **Comenzando** 🚀
 
-In the project directory, you can run:
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-### `yarn start`
+### **Pre-requisitos** 📋
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_Dependencias que necesitas para ejecutar, construir y desarrollar_
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+>> npx create-react-app nombre_aplicacion
 
-### `yarn build`
+# En la Carpeta de la aplicación  React recién creada
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Esto es un framework para front-end, es multiplataforma y de muy fácil manejo. Lo recomiendo mucho:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+>> yarn add bootstrap 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Este es la dependencia para trabajar Firebase y sus Web services desde react: 
 
-### `yarn eject`
+>> yarn add firebase 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Depencia necesaria para trabajar Routs en React:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+>> yarn add react-router-dom 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Finalmente haz un gitclone de Este proyecto, si seguiste los pasos anteriores solo tendrías que  copiar La carpeta src de este repo en tu carpeta local  de App  React.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
+## Despliegue 📦
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_Para Ejecutar y desplegar el proyecto necesitas:_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Ir a la página oficial de [Firebase](https://console.firebase.google.com/), crear una cuenta o logearte con alguna y crear un proyecto.
+- Teniendo un proyecto en Firebase, te diriges al proyecto >> configuraciones >> Buscas un apartado _SDK setup and configuration_ , de ahí copias el siguiente bloque de código:
+![Image text]('')
 
-### Code Splitting
+- Ese bloque de código lo pegaras en un archivo nuevo que estará dentro de: _**/directorio_AppReact/src/firebase_config.js**_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+# Archivo Firebase_Config.js
 
-### Analyzing the Bundle Size
+import firebase from "firebase/app";
+import 'firebase/firestore'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+const firebaseConfig = {
+    apiKey: "xxxxxxxxxxxxxxxxxx",
+    authDomain: "xxxxxxxxxxx.firebaseapp.com",
+    databaseURL: "https://xxxxxxxxxxx-default-rtdb.firebaseio.com",
+    projectId: "xxxxxxxxxx",
+    storageBucket: "xxxxxxxxxxx.appspot.com",
+    messagingSenderId: "xxxxxxxxxxx",
+    appId: "1:xxxxxxxxxx:web:xxxxxxxxxxxxxxx",
+    measurementId: "xx-xxxxxxxx"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const store = firebase.firestore()
 
-### Making a Progressive Web App
+  export {store}
+```
+## Construido con 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* [React](https://es.reactjs.org/) - El framework web usado
+* [Firebase/Firestore](https://console.firebase.google.com/) - Database, Framework, and others.
+* [Visual Studio Code](https://code.visualstudio.com/) - Editor de texto
 
-### Advanced Configuration
+## Autores ✒️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **Juan Diego Castellanos Jerez** - *Owner and Developer* - [Juan Diego Castellanos Jerez](https://www.linkedin.com/in/juan-diego-castellanos-jerez-944267212/)
 
-### Deployment
+## Licencia 📄
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-### `yarn build` fails to minify
+## Expresiones de Gratitud 🎁
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Agradezco a quienes quiera apoyar con una donación [@JuanCaste02](https://paypal.me/JuanCaste02) 📢
+
+
+
+
+---
+Feliz Código!!
