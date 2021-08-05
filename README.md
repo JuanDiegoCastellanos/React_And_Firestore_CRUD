@@ -39,7 +39,7 @@ _Para Ejecutar y desplegar el proyecto necesitas:_
 
 - Ir a la página oficial de [Firebase](https://console.firebase.google.com/), crear una cuenta o logearte con alguna y crear un proyecto.
 - Teniendo un proyecto en Firebase, te diriges al proyecto >> configuraciones >> Buscas un apartado _SDK setup and configuration_ , de ahí copias el siguiente bloque de código:
-![Image text]('https://github.com/JuanDiegoCastellanos/React_And_Firestore_CRUD/blob/main/examples/firestoreIMG.png')
+![Image text](https://github.com/JuanDiegoCastellanos/React_And_Firestore_CRUD/blob/main/examples/firestoreIMG.png)
 
 - Ese bloque de código lo pegaras en un archivo nuevo que estará dentro de: _**/directorio_AppReact/src/firebase_config.js**_
 
